@@ -1,0 +1,24 @@
+<h1>this is my employees data</h1>
+
+<div *ngIf="employees.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="employees.length===0">
+  <h2>no data found</h2>
+</div>
